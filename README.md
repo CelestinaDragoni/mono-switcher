@@ -9,20 +9,16 @@ Desktop Application That Controls Monoprice HDMI 8-Port Switch
 
 ## Package Downloads
 ### Linux (v1.0.0)
-**Compressed Package**: Download
+**Portable Package (tar.gz)**: Download
 
 **Debian Package**: Download
 
 **AppImage Package**: Download
 
 ### Windows (v1.0.0)
-**Portable Package**: Download
+**Portable Package (zip)**: Download
 
 **Installer Package**: Download
-
-### MacOS (Source Only)
-Please see compile instructions below. I don't feel like maintaining this application in MacOS since I already feel as if this is niche enough of a solution. If there is enough demand that I support it.
-
 
 
 

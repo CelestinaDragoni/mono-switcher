@@ -1,0 +1,21 @@
+{
+	"bounds":{
+        "x":0, 
+        "y":0, 
+        "height":800, 
+        "width":640
+    },
+    "port":"",
+    "deviceActive":false,
+    "devices":[
+    	{"label":"HDMI 1", "icon":false},
+    	{"label":"HDMI 2", "icon":false},
+    	{"label":"HDMI 3", "icon":false},
+    	{"label":"HDMI 4", "icon":false},
+    	{"label":"HDMI 5", "icon":false},
+    	{"label":"HDMI 6", "icon":false},
+    	{"label":"HDMI 7", "icon":false},
+    	{"label":"HDMI 8", "icon":false}
+    ],
+    "modalHelp": false
+}
