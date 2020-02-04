@@ -3,7 +3,7 @@ require('events').EventEmitter.defaultMaxListeners = 99;
 const {app, BrowserWindow} = require('electron');
 let mainWindow;
 
-function createWindow () {
+function createWindow() {
 
     if (process.platform === "win32") {
         ico = __dirname+'/resources/icons/icon.png'; 
@@ -21,7 +21,7 @@ function createWindow () {
         y:0, 
         minWidth:50, 
         minHeight:50, 
-        menu:null,
+        //menu:null,
         toolbar:false,
         minimizable:false,
         fullscreen:false,
@@ -29,7 +29,7 @@ function createWindow () {
     };
 
     mainWindow = new BrowserWindow(windowConfig);
-    mainWindow.setMenu(null);
+    //mainWindow.setMenu(null);
 
     // Our Controller File
     mainWindow.loadFile(__dirname+'/index.html');
@@ -37,12 +37,12 @@ function createWindow () {
 }
 
 app.on('ready', createWindow);
-app.on('window-all-closed', function () {
+app.on('window-all-closed', function() {
     if (process.platform !== 'darwin') {
-      app.quit();
+        app.quit();
     }
 });
-app.on('activate', function () {
+app.on('activate', function() {
     if (mainWindow === null) {
         createWindow();
     }

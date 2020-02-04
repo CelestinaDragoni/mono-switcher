@@ -2,26 +2,26 @@ import Commands from '../schemas/serial.json';
 
 export default class SerialService {
 
-	/** On update handler **/
-	onUpdate = null;
+    /** On update handler **/
+    onUpdate = null;
 
-	/** Configuration service **/
-	configService = null;
+    /** Configuration service **/
+    configService = null;
 
-	/** Singleton Instance **/
+    /** Singleton Instance **/
     static instance = null;
 
-	/**
+    /**
      * Singleton constructor
      * @param {Function} updateHandler - Update handler, in views/Root
      * @param {ConfigService} configService -Instance of Config Service
      * @return {SerialService}
      **/
     static getInstance(updateHandler, configService) {
-        if (ConfigService.instance) {
-            return ConfigService.instance;
+        if (SerialService.instance) {
+            return SerialService.instance;
         }
-        return ConfigService.instance = new ConfigService(updateHandler, configService);  
+        return SerialService.instance = new SerialService(updateHandler, configService);  
     }
 
 
