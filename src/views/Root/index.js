@@ -6,12 +6,7 @@ import ConfigService from   '../../services/Config';
 import SerialService from '../../services/Serial';
 
 // Views
-//import ConfigView from '../Config';
-//import ModuleView from '../Module';
-//import StyleView from '../Style';
-
-// Modals
-//import HelpModal from '../../components/compound/modals/HelpModal';
+import DisplayView from '../Display';
 
 // Context
 import {RootContext} from '../../context/RootContext';
@@ -40,10 +35,11 @@ export default class RootViewController extends React.Component {
 
         // Initalize Global Services
         this.services.config        = ConfigService.getInstance(this.onServiceUpdate, props.controller);
-        this.services.language      = SerialService.getInstance(this.onServiceUpdate, this.services.config);
+        this.services.serial        = SerialService.getInstance(this.onServiceUpdate, this.services.config);
 
         // Stuff that shouldn't be true when launching.
-        this.services.config.modalHelp = false;
+        this.services.config._data.configuration = false;
+        this.services.config._data.loading = false;
 
         // Reload bounds after launch (Electron only)
         if (props.controller.setWindowBounds) {
@@ -58,10 +54,8 @@ export default class RootViewController extends React.Component {
     }
 
     render() {
-
-        const {modalHelp} = this.services.config;
         return <RootContext.Provider value={this.services}>
-            <div>Test</div>
+            <DisplayView/>
         </RootContext.Provider>;
         
     }

@@ -97,6 +97,10 @@ module.exports = {
             VERSION: JSON.stringify(yarnPackage.version)
         })
     ],
+    externals: {
+      bindings: true,
+      serialport: true,
+    },
     optimization: {
         splitChunks: {
             cacheGroups: {
@@ -109,3 +113,5 @@ module.exports = {
         }
     }
 };
+
+

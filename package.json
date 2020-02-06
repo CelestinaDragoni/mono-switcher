@@ -2,13 +2,15 @@
   "name": "mono-switcher",
   "version": "1.0.0",
   "license": "BSD-4-Clause",
-  "author": "Anthony Mattera",
+  "author": "Anthony Mattera (KernelZechs)",
   "private": true,
   "main": "build/electron.js",
   "dependencies": {
+    "@serialport/parser-byte-length": "^8.0.6",
     "clone": "^2.1.2",
     "electron-store": "^5.1.0",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "serialport": "^8.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
@@ -17,6 +19,7 @@
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-stage-0": "^7.0.0",
     "@google-cloud/translate": "^5.0.2",
+    "@serialport/parser-inter-byte-timeout": "^8.0.6",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-react-css-modules": "^5.2.6",
@@ -25,8 +28,9 @@
     "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "dotenv": "^8.2.0",
-    "electron": "^8.0.0",
-    "electron-builder": "^22.3.2",
+    "electron": "^7.1.1",
+    "electron-builder": "^21.2.0",
+    "electron-rebuild": "^1.10.0",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "eslint-loader": "^3.0.2",
@@ -51,6 +55,8 @@
     "write-file-atomic": "^3.0.1"
   },
   "scripts": {
+    "electron-rebuild": "electron-rebuild -f -w serialport",
+    "electron-deps": "electron-builder install-app-deps",
     "fix": "eslint --fix src/**",
     "start": "webpack && electron ./build/electron.js & webpack --watch",
     "build": "webpack",

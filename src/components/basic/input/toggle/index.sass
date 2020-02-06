@@ -1,0 +1,46 @@
+@import '../../../../styles/variables.sass'
+
+.mono-toggle
+  position: relative
+  display: inline-block
+  width: 52px
+  height: 23px
+
+.mono-toggle input
+  opacity: 0
+  width: 0
+  height: 0
+
+.mono-toggle .toggle
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: $color-darker
+  transition: .4s
+  border: 0
+
+.mono-toggle .toggle:before
+  position: absolute
+  content: ""
+  height: 23px
+  width: 23px
+  left: 0px
+  bottom: 0px
+  background-color: $color-lightest
+  transition: .4s
+
+input:checked + .toggle
+  background-color: $color-darker
+
+input:checked + .toggle:before
+  transform: translateX(32px)
+  background: $color-accent
+
+.mono-toggle .toggle.round
+  border-radius: 34px
+
+.mono-toggle .toggle.round:before 
+  border-radius: 100%

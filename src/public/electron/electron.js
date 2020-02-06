@@ -3,6 +3,9 @@ require('events').EventEmitter.defaultMaxListeners = 99;
 const {app, BrowserWindow} = require('electron');
 let mainWindow;
 
+// Chromium Offscreen Rendering Fix
+app.disableHardwareAcceleration();
+
 function createWindow() {
 
     if (process.platform === "win32") {

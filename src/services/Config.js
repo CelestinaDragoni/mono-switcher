@@ -69,7 +69,13 @@ export default class ConfigService {
     /////////////////////////////////////////////
 
 
-
+    /**
+     * GETTER: Get configuration value
+     * @return {bool} configuration
+     **/
+    get configuration() {
+        return this._data.configuration;
+    }
 
     /**
      * GETTER: Get the current serial port in use.
@@ -85,6 +91,15 @@ export default class ConfigService {
      **/
     getDevices() {
         return this._data.devices;
+    }
+
+
+    /**
+     * GETTER: Gets current mutex state for GUI
+     * @return {bool} v
+     **/
+    get loading() {
+        return this._data.loading;
     }
 
     /**
@@ -111,12 +126,22 @@ export default class ConfigService {
     /////////////////////////////////////////////
 
     /**
+     * SETTER: Sets configuration value
+     * @param {bool} v
+     * @return {void}
+     **/
+    set configuration(v) {
+        this._data.configuration = v;
+        this._writeConfig();
+    }
+
+    /**
      * SETTER: Sets the serial port being used.
      * @param {string} v
      * @return {void}
      **/
     set port(v) {
-        this._data.port = port;
+        this._data.port = v;
         this._writeConfig();
     }
 
@@ -136,7 +161,18 @@ export default class ConfigService {
      * @return {void}
      **/
     set deviceLabel(v) {
+        console.log(v);
         this._data.devices[v.i].label = v.label;
+        this._writeConfig();
+    }
+
+    /**
+     * SETTER: Sets mutex lock for GUI.
+     * @param {bool} v
+     * @return {void}
+     **/
+    set loading(v) {
+        this._data.loading = v;
         this._writeConfig();
     }
 
