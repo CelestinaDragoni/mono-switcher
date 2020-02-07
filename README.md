@@ -1,7 +1,7 @@
 ![MonoSplitter](https://raw.githubusercontent.com/KernelZechs/mono-switcher/master/.github/logo.png?token=ALCBFT3OKC3F4MMTSGCWXHK6HTBGA)
 
 # MonoSwitcher
-Desktop Application That Controls the Monoprice HDMI 8-Port Switch via Serial
+Desktop Application That Controls the Monoprice 8-Port HDMI Switch via Serial
 
 ## Video Demo
 https://www.youtube.com/watch?v=hlR_oQB_hqs&feature=youtu.be
