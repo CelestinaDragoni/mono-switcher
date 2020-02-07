@@ -17,12 +17,12 @@ Desktop Application That Controls the Monoprice HDMI 8-Port Switch via Serial
 **AppImage Package**: [Download](http://kernelzechs.com/downloads/mono-tracker/linux/MonoSwitcher-1.0.0.AppImage)
 
 ### Windows (v1.0.0)
-**Portable Package (zip)**: Download
+**Portable Package (zip)**: [Download](http://kernelzechs.com/downloads/mono-tracker/windows/MonoSwitcher-1.0.0.zip)
 
-**Installer Package**: Download
+**Installer Package**: [Download](http://kernelzechs.com/downloads/mono-tracker/windows/MonoSwitcher-1.0.0.exe)
 
 ### macOS (v1.0.0)
-**Portable Package (dmg)**: Download
+**Portable Package (dmg)**: [Download](http://kernelzechs.com/downloads/mono-tracker/macos/MonoSwitcher-1.0.0.dmg)
 
 ## Support
 I sorta did this for funsies and I'm not really looking to support it because I already have enough on my plate. However if something is critically wrong, feel free to add a ticket in GitHub. Feature requests will be rejected as it does what it needs to do at a fundamental level.
@@ -31,7 +31,7 @@ I sorta did this for funsies and I'm not really looking to support it because I 
 What you're looking for is my sister's work which can be found here: [https://github.com/NicholeMattera/MonopriceSwitcherService](https://github.com/NicholeMattera/MonopriceSwitcherService)
 
 ## Credits
-This wouldn't have been possible without the serial communication documentation provided by the dudeguy on the Amazon comments for the product. Information on their documentation can be found here.
+This wouldn't have been possible without the serial communication documentation provided by the dudeguy on the Amazon comments for the product. [Information on their documentation can be found here](https://github.com/KernelZechs/mono-switcher/blob/master/CREDIT.md).
 
 ## Development
 ### Knowledge Prerequisites 
