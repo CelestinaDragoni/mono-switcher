@@ -161,7 +161,6 @@ export default class ConfigService {
      * @return {void}
      **/
     set deviceLabel(v) {
-        console.log(v);
         this._data.devices[v.i].label = v.label;
         this._writeConfig();
     }
