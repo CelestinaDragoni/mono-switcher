@@ -87,6 +87,7 @@ export default class SerialService {
 
 
         } catch (e) {
+            this.active = -1;
             console.error('Could not connect to serial port...');
         }
 
@@ -129,12 +130,23 @@ export default class SerialService {
                 if (err) {
                     console.error('Could not get active HDMI', err);
                 }
+
+                // Timeout if we never get a response
+                setTimeout(() => {
+                    if (this.configService.loading) {
+                        console.error('Response timed out. Are you connected to the correct device?');
+                        this.active = -1;
+                        this.configService.loading = false;
+                    }
+                }, 2000);
+
             });
             this.connection.drain();
         } catch {
-            console.error('No Connection');
             this.configService.loading = false;
+            console.error('No Connection');
         }
+        
 
     }
 
