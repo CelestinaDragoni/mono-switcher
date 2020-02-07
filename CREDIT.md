@@ -1,6 +1,9 @@
-Josh @ Amazon
+
+# Documentation Credits
+### Josh @ Amazon.com
 Comment Link: https://www.amazon.com/gp/customer-reviews/RJFTW648Q1UIO/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&ASIN=B003L14X3A
 
+```
 I was disappointed the serial protocol wasn't documented, so i ran the included application and logged the data, with the following result:
 
 Connect 9600 baud, 8N1
@@ -70,3 +73,4 @@ A5 - Checksum of first four bytes (calculated via CRC-8/MAXIM 1 Wire CRC)
 01 - Unknown
 00 - Unknown
 91 - Checksum of last four bytes (calculated via CRC-8/MAXIM 1 Wire CRC)
+```
