@@ -2,7 +2,7 @@
   "name": "mono-switcher",
   "version": "1.0.0",
   "license": "BSD-4-Clause",
-  "author": "Anthony Mattera (KernelZechs)",
+  "author": "Anthony Mattera (KernelZechs) <void@kernelzechs.com>",
   "private": true,
   "main": "build/electron.js",
   "dependencies": {
