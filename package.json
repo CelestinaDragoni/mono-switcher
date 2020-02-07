@@ -56,11 +56,10 @@
   },
   "scripts": {
     "electron-rebuild": "electron-rebuild -f -w serialport",
-    "electron-deps": "electron-builder install-app-deps",
     "fix": "eslint --fix src/**",
     "start": "webpack && electron ./build/electron.js & webpack --watch",
     "build": "webpack",
-    "bundle": "rm -Rf ./build && rm -Rf ./dist && webpack && electron-builder"
+    "bundle": "rm -Rf ./build && rm -Rf ./dist && electron-rebuild -f -w serialport && webpack && electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
