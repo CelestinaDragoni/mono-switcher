@@ -1,3 +1,4 @@
+![MonoSplitter](https://raw.githubusercontent.com/KernelZechs/mono-switcher/master/.github/logo.png?token=ALCBFT6RTDLFWZYSQH2FLXS6HTA5C)
 
 # MonoSwitcher
 Desktop Application That Controls the Monoprice HDMI 8-Port Switch via Serial
