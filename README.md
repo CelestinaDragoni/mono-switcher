@@ -3,6 +3,9 @@
 # MonoSwitcher
 Desktop Application That Controls the Monoprice HDMI 8-Port Switch via Serial
 
+## Video Demo
+https://www.youtube.com/watch?v=hlR_oQB_hqs&feature=youtu.be
+
 ## Requirements
 1. You need an 8-port Monoprice HDMI Switch: https://www.amazon.com/gp/product/B003L14X3A
 2. You need an RS232 to USB Cable (FTDI Chipset Recommended): https://www.amazon.com/gp/product/B0762BTX7T
