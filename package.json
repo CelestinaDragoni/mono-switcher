@@ -74,8 +74,8 @@
   },
   "build": {
     "appId": "mono-tracker",
-    "artifactName": "MonoTracker-${version}.${ext}",
-    "productName": "MonoTracker",
+    "artifactName": "MonoSwitcher-${version}.${ext}",
+    "productName": "MonoSwitcher",
     "files": [
       "build/**/*"
     ],
