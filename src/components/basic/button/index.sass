@@ -11,15 +11,19 @@
 .button-panel
     display: inline-block
     margin: 0px auto
-    border-radius: 5px
     text-align: center
     color: $color-font
     text-decoration: none
     line-height: 14px
-    height: 24px
+    height: 28px
     padding: 6px
     vertical-align: middle
     font-size: 12px
-    background-color: $color-light
+    border: 1px solid $color-lightest
+    border-bottom-color: $color-darker
+    border-right-color: $color-darker
+    background: linear-gradient(0deg, $color-light 0%, $color-lightest 100%)
+    font-weight: bold
+
     &:hover
-        background-color: $color-lightest
+        background: linear-gradient(0deg, $color-lightest 0%, $color-light 100%)

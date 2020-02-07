@@ -26,9 +26,14 @@ export default class ElectronController {
         this.controller = controller;
         this.store = new store();
 
+        remote.getCurrentWindow().removeAllListeners();
+
         remote.getCurrentWindow().on('resize', this.onWindowChange);
         remote.getCurrentWindow().on('move', this.onWindowChange);
-        
+
+        //remote.globalShortcut.register('F5', this.reload);
+        //remote.globalShortcut.register('F5', this.reload);
+
         window._link = this.onExternalLink;
     }
 
@@ -84,6 +89,18 @@ export default class ElectronController {
     onExternalLink(e) {
         e.preventDefault();
         shell.openExternal(e.target.href);
+    }
+
+    /**
+     * Reload electron window.
+     * @return {void}
+     **/
+    reload = () => {
+        remote.getCurrentWindow().reload();
+    }
+
+    devTools = () => {
+        remote.getCurrentWindow().webContents.openDevTools();
     }
 
 }

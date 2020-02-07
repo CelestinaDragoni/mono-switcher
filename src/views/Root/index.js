@@ -23,7 +23,8 @@ export default class RootViewController extends React.Component {
 
     services = {
         config:null,
-        serial:null
+        serial:null,
+        functions:{}
     }
 
     constructor(props) {
@@ -36,6 +37,7 @@ export default class RootViewController extends React.Component {
         // Initalize Global Services
         this.services.config        = ConfigService.getInstance(this.onServiceUpdate, props.controller);
         this.services.serial        = SerialService.getInstance(this.onServiceUpdate, this.services.config);
+        this.services.functions     = {reload: props.controller.reload};
 
         // Stuff that shouldn't be true when launching.
         this.services.config._data.configuration = false;

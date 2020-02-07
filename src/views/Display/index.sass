@@ -1,4 +1,7 @@
 @import '../../styles/variables.sass'
+.mono-display
+    min-width: 400px
+    
 .mono-header
     display: flex
     padding-bottom: 20px
@@ -24,7 +27,7 @@
 
 .mono-container-label 
     position: absolute
-    top: -5px
+    top: -6px
     left: 5px
     font-size: 12px
     font-weight: bold
@@ -33,12 +36,16 @@
     -webkit-text-stroke-width: .25px
     -webkit-text-stroke-color: $color-darker
 
+.mono-hdmi-label
+    font-weight: bold
+    font-size: 14px
+
 .mono-icon-active
     padding: 10px
     font-size: 24px
     color: $color-light
     &.active
-        color: lime
+        color: $color-accent
 
 .mono-container
     box-shadow: 0px 0px 20px black
@@ -48,8 +55,10 @@
     flex-grow: 1
     display: inline-block
     width: 200px
-    background: $color-normal
+    background: linear-gradient(90deg, $color-normal 0%, $color-dark 100%)
     border: 1px solid $color-light
+    border-bottom-color: $color-darker
+    border-right-color: $color-darker
     padding: 10px
     text-align: center
     margin: 10px
@@ -59,6 +68,9 @@
         flex-grow: 1
         width: 100%
         margin-right: 10px
-        &:last-child
-            width: 200px
-            margin: 0
+    &.static
+        padding: 12px
+        margin: 0px
+        width: 150px
+        flex-grow: 1
+        margin-right: 10px

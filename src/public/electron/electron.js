@@ -1,6 +1,6 @@
 // May not need this in react land, but still want to be sure.
 require('events').EventEmitter.defaultMaxListeners = 99;
-const {app, BrowserWindow} = require('electron');
+const {app, remote, globalShortcut, BrowserWindow} = require('electron');
 let mainWindow;
 
 // Chromium Offscreen Rendering Fix
@@ -24,7 +24,7 @@ function createWindow() {
         y:0, 
         minWidth:50, 
         minHeight:50, 
-        //menu:null,
+        menu:null,
         toolbar:false,
         minimizable:false,
         fullscreen:false,
@@ -32,10 +32,17 @@ function createWindow() {
     };
 
     mainWindow = new BrowserWindow(windowConfig);
-    //mainWindow.setMenu(null);
+    mainWindow.setMenu(null);
 
     // Our Controller File
     mainWindow.loadFile(__dirname+'/index.html');
+
+    globalShortcut.register('F5', () => {
+        mainWindow.webContents.reload();
+    });
+    globalShortcut.register('F8', () => {
+        mainWindow.webContents.openDevTools();
+    });
     
 }
 

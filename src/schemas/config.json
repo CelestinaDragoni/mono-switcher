@@ -2,20 +2,20 @@
 	"bounds":{
         "x":0, 
         "y":0, 
-        "height":645, 
-        "width":560
+        "height":630, 
+        "width":520
     },
     "port":"",
     "deviceActive":false,
     "devices":[
-    	{"label":"HDMI 1", "icon":false},
-    	{"label":"HDMI 2", "icon":false},
-    	{"label":"HDMI 3", "icon":false},
-    	{"label":"HDMI 4", "icon":false},
-    	{"label":"HDMI 5", "icon":false},
-    	{"label":"HDMI 6", "icon":false},
-    	{"label":"HDMI 7", "icon":false},
-    	{"label":"HDMI 8", "icon":false}
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"},
+    	{"label":"NO LABEL"}
     ],
     "loading":false,
     "configuration":false

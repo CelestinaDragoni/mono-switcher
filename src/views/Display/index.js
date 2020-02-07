@@ -33,6 +33,10 @@ export default class DisplayView extends React.Component {
         this.context.config.deviceLabel = {i:parseInt(target), label:value};
     }
 
+    onRefresh = () => {
+        this.context.functions.reload();
+    }
+
     renderLoading() {
         const {loading} = this.context.config;
         if (loading) {
@@ -84,15 +88,18 @@ export default class DisplayView extends React.Component {
         const elements = (configuration) ? this.renderConfiguration() : this.renderView();
         
         return (
-            <div >
+            <div className='mono-display'>
                 <header className='mono-header'>
                     <section className='mono-container full'>
-                        <div className='mono-container-label'>Serial Device</div>
+                        <div className='mono-container-label'>Device</div>
                         <Select value={port} options={ports} onChange={this.onPortChange}/>
                     </section>
-                    <section className='mono-container full'>
-                        <div className='mono-container-label'>Config Mode</div>
+                    <section className='mono-container static'>
+                        <div className='mono-container-label'>Config</div>
                         <Toggle value={configuration} onChange={this.onToggleConfig} />
+                    </section>
+                    <section className='mono-container static'>
+                        <Button icon='fas fa-sync-alt' onClick={this.onRefresh} >Refresh</Button>
                     </section>
                 </header>
                 <div className='mono-container-flex'>

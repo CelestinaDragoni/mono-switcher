@@ -182,6 +182,7 @@ export default class ConfigService {
      * @return {void}
      **/
     set bounds(v) {
+        console.log(v);
         this._data.bounds = v;
         this._writeConfig();
     }
